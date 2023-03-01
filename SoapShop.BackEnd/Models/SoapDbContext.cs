@@ -6,8 +6,12 @@ namespace SoapShop.BackEnd.Models
 {
     public class SoapDbContext : IdentityUserContext<ApplicationUser>
     {
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+
         public SoapDbContext(DbContextOptions<SoapDbContext> options) : base(options)
         {
         }
+
     }
 }
